@@ -1,10 +1,11 @@
 package lotto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LottoCustomer {
     private int BetMoney;
-    private List<Lotto> lottos;
+    private List<Lotto> lottos = new ArrayList<>();
     LottoCustomer() {
     }
 
@@ -14,5 +15,9 @@ public class LottoCustomer {
 
     void collectLotto(Lotto lotto) {
         this.lottos.add(lotto);
+    }
+
+    List<Lotto> getLottos() {
+        return lottos;
     }
 }
